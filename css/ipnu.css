@@ -1,0 +1,700 @@
+@font-face {
+    font-family: "judul";
+    src: url(../font/Aeonik-Medium.otf);
+}
+
+@font-face {
+    font-family: "isi";
+    src: url(../font/Aeonik-Regular.otf);
+}
+
+@media (min-width: 620px) {
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        font-family: "Poppins";
+    }
+
+
+    .container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 100vh;
+        position: relative;
+        z-index: -1;
+    }
+
+    .logo {
+        position: absolute;
+        top: 1vw;
+        left: 1vw;
+        width: 8vw;
+    }
+
+    .judul {
+        width: 20vw;
+        height: 11vw;
+        position: absolute;
+        top: 12vw;
+        left: 5vw;
+        border-left: 0.5vw solid #000;
+    }
+
+    .p-judul {
+        font-size: 6vw;
+        margin: -1vw 1vw;
+        font-family: 'Vidaloka',
+            serif;
+    }
+
+    .p-judul2 {
+        font-size: 6vw;
+        margin: -2vw 1vw;
+        font-family: 'Vidaloka',
+            serif;
+    }
+
+    .judul-isi {
+        position: absolute;
+        top: 27vw;
+        left: 5vw;
+        font-size: 1.2vw;
+        width: 35vw;
+    }
+
+    .klik-bawah {
+        width: 10vw;
+        height: 3vw;
+        display: flex;
+        position: absolute;
+        top: 40vw;
+        left: 25vw;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border: 0.2vw solid #000;
+        cursor: pointer;
+    }
+
+    .klik-bawah:hover {
+        background-color: #000;
+        color: #fff;
+        transition: 500ms ease-out;
+    }
+
+    .hitam-block {
+        width: 4vw;
+        height: 16vh;
+        background-color: #151515;
+        content: "";
+        bottom: 0;
+        left: 0;
+        position: absolute;
+    }
+
+    .hitam-block2 {
+        width: 4vw;
+        height: 6vw;
+        background-color: #151515;
+        content: "";
+        bottom: 0;
+        left: 4vw;
+        position: absolute;
+    }
+
+    .hitam-block3 {
+        width: 50vw;
+        height: 3vw;
+        background-color: #151515;
+        content: "";
+        bottom: 0;
+        left: 5vw;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .hitam-block4 {
+        width: 3vw;
+        height: 3vw;
+        background-color: #000000;
+        content: "";
+        top: 5vh;
+        left: 38vw;
+        position: absolute;
+    }
+
+    .hitam-block5 {
+        width: 3vw;
+        height: 3vw;
+        background-color: #000000;
+        content: "";
+        top: 11vh;
+        left: 35vw;
+        position: absolute;
+    }
+
+    .container-kanan {
+        position: relative;
+        left: 100%;
+        object-fit: cover;
+        background-position: center;
+        background-size: cover;
+        background-image: url(../jpeg/3.jpg);
+        box-shadow: inset 9px 0px 33px -8px rgba(0, 0, 0, 0.75);
+    }
+
+    .navbar {
+        width: 33vw;
+        height: 5vw;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        position: absolute;
+        right: 0;
+        top: 0;
+        float: right;
+        z-index: 1;
+        transition: all 2s ease-in-out;
+    }
+
+    /*-----------humberger navbar--------*/
+
+    .nav-kecil{
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 5vw;
+        height: 5vw;
+        cursor: pointer;
+        transition: all 1s linear;
+    }
+
+    .nav-kecil span:nth-child(1){
+        width: 3vw;
+        height: 0.4vw;
+        background-color: #fff;
+        border-radius: 10vw;
+        transition: all .5s linear;
+    }
+
+    .nav-kecil span:nth-child(2){
+        width: 3vw;
+        height: 0.4vw;
+        background-color: #fff;
+        border-radius: 10vw;
+        transition: all .5s linear;
+
+        margin: -1.5vw 0 0 0;
+    }
+    .nav-kecil span:nth-child(3){
+        width: 3vw;
+        height: 0.4vw;
+        background-color: #fff;
+        border-radius: 10vw;
+        transition: all .5s linear;
+
+        margin: -2.5vw 0 0 0;
+    }
+
+    .nav-kecil.down span:nth-child(1){
+        transform: rotate(40deg);
+        position: relative;
+        transition: all .5s linear;
+        top: 1vw;
+    }
+
+    .nav-kecil.down span:nth-child(2){
+        opacity: 0%;
+        width: 0%;
+    }
+
+    .nav-kecil.down span:nth-child(3){
+        position: relative;
+        transition: all .5s linear;
+        transform: rotate(-40deg);
+        top: -1vw;
+    }
+
+    /*navbar humberger ntek*/
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+    }
+
+    li a {
+        text-decoration: none;
+        font-size: 1.2vw;
+        color: rgb(0, 0, 0);
+        margin: 0 0 0 2.5vw;
+        cursor: pointer;
+    }
+
+    /*-----bag1-----*/
+    .bag1 {
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+       padding: 8vw 0 ;
+        margin: auto;
+    }
+
+    .bag1-kiri {
+        position: relative;
+        padding: 0 2vw;
+    }
+
+    .bag1-box {
+        width: 40vw;
+    }
+
+    .bag1-box img{
+        width: 40vw;
+    }
+
+    .bag1-kanan {
+        margin: 0 2vw;
+    }
+
+    .bag1-kanan h2 {
+        font-size: 2.5vw;
+        font-family: "judul";
+    }
+
+    .bag1-judul {
+        font-size: 2vw;
+        margin: 2vw 0 0 0;
+        font-family: "judul";
+    }
+
+    .bag1-isi {
+        margin: 1vw 0;
+        font-size: 1.2vw;
+    }
+
+    .bag1-a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    .link-sejarah {
+        display: grid;
+        grid-template-columns: 9vw 2vw;
+        margin: 3vw 0 0 18vw;
+        border-radius: 4vw;
+        text-align: center;
+        width: 13vw;
+        padding: 1vw;
+        background-color: #151515;
+        color: #fff;
+        transition: width 1s;
+    }
+
+    .link-sejarah p{
+        font-size: 1vw;
+    }
+
+    .link-sejarah i {
+        transform: rotate(-90deg);
+        font-size: 1.2vw;
+        margin: 0 0 0 0.5vw;
+    }
+
+    .link-sejarah:hover {
+        width: 15vw;
+    }
+
+    /*----bag2----*/
+    .bag2 {
+        width: 100%;
+        background-color: #151515;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .bag2-kiri {
+        position: relative;
+        margin: 15vw 3vw 0 5vw;
+    }
+
+    .bag2-11, .dokumen-judul {
+        display: none;
+    }
+
+    .bag2-kiri-judul {
+        width: 20vw;
+        height: 10vw;
+    }
+
+    .bag2-kiri-judul p {
+
+        color: #fff;
+        font-family: 'isi',
+            serif;
+        font-size: 1.5vw;
+        font-weight: 100;
+    }
+
+    .kiri-i {
+        font-size: 0.8vw;
+        font-weight: 100;
+        transform: rotate(-45deg)
+    }
+
+    /*-------popup-----------*/
+
+    .dokumentasi1,
+    .dokumentasi3{
+        opacity: 0;
+        transform: translateX(-3vw);
+        transition: 1s ease-in-out;
+    }
+
+    .dokumentasi3{
+        margin: 20vw 0 0 0;
+    }
+
+    .dokumen-aktif,
+    .dokumen-aktif3{
+        opacity: 1;
+        transform: translateX(0);
+        transition: 1s ease-in-out;
+    }
+
+    .dokumentasi2,
+    .dokumentasi4 {
+        margin: 20vw 0 0 0;
+        opacity: 0;
+        transform: translateX(3vw);
+        transition: 1s ease-in-out;
+    }
+
+    .dokumen-aktif2,
+    .dokumen-aktif4{
+        opacity: 1;
+        transform: translateX(0);
+        transition: 1s ease-in-out;
+    }
+
+    /*-------popup ntek-----------*/
+
+    .judul-dok {
+        display: grid;
+        height: 8vw;
+        margin: 0 0 3vw 0;
+        grid-template-columns: 4vw 1fr 3vw;
+    }
+
+    .judul-dok1,
+    .judul-dok2,
+    .judul-dok3 {
+        position: relative;
+    }
+
+    .dok-nomor {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2vw;
+        height: 2vw;
+        border-radius: 40vw;
+        border: 0.2vw solid #fff;
+
+        font-family: "judul";
+        font-size: 1vw;
+        color: #fff;
+    }
+
+    .judul-dok1 p {
+        margin: 5vw 0 0 0;
+        color: #fff;
+        font-size: 1.1vw;
+    }
+
+    .judul-dok2 p {
+        font-family: "judul";
+        font-size: 3.2vw;
+        color: #fff;
+        margin: -0.5vw 0 0 0;
+    }
+
+    .judul-dok3 i {
+        color: #fff;
+        margin: 6vw 0 0 0;
+        font-size: 3vw;
+        transform: rotate(45deg);
+    }
+
+    .bingkai-foto {
+        width: 100%;
+        height: 25vw;
+        background-size: cover;
+        object-fit: cover;
+        background-position: center;
+        background-image: url("../jpeg/2.jpg");
+        background-color: beige;
+    }
+
+    .bingkai-foto2 {
+        width: 100%;
+        height: 25vw;
+        background-size: cover;
+        object-fit: cover;
+        background-position: center;
+        background-image: url("../jpeg/5.jpg");
+        background-color: beige;
+    }
+
+    .bingkai-foto3 {
+        width: 100%;
+        height: 25vw;
+        background-size: cover;
+        object-fit: cover;
+        background-position: center;
+        background-image: url("../jpeg/4.jpg");
+        background-color: beige;
+    }
+
+    .bingkai-foto4 {
+        width: 100%;
+        height: 25vw;
+    }
+
+    .bingkai-foto4 img {
+        width: 100%;
+        position: relative;
+    }
+
+
+    .bag2-kanan {
+        display: flex;
+        flex-direction: column;
+        margin: 7vw 5vw 0 3vw;
+    }
+
+    .dokumentasi2 {
+        margin: 10vw 0;
+    }
+
+    .dokumentasi4 {
+        margin: 10vw 0;
+    }
+
+    .bag2-kanan h1 {
+        font-size: "judul";
+        font-size: 2.5vw;
+        margin: 0 0 0 -5vw;
+        color: #fff;
+    }
+
+    .bag2-1 {
+        border: 0.3vw solid #fff;
+        width: 40vw;
+        padding: 1vw 3vw;
+        font-size: 1.1vw;
+        display: flex;
+        margin: 10vw 0;
+        flex-direction: column;
+        color: #fff;
+    }
+
+    /*--------bag3---------------*/
+    .bag3 {
+        width: 90%;
+        background-color: #fff;
+        padding: 5vw 0 0 0;
+        margin: auto;
+    }
+
+    .bag3-judul {
+        font-size: 3vw;
+        font-family: "judul";
+        text-align: center;
+    }
+
+    .bag3-judul-hiasan {
+        width: 10vw;
+        height: 0.2vw;
+        margin: 0.9vw auto;
+        border-radius: 3vw;
+        background-color: #10804C;
+    }
+
+    .bag3-isi {
+        width: 95%;
+        margin: 2vw 0 5vw 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 1vw;
+    }
+
+    .bag3-content-isi h3 {
+        font-size: 1.5vw;
+    }
+
+    .bag3-content-isi p {
+        font-size: 1.2vw;
+    }
+
+    .bag3-content {
+        display: grid;
+        grid-template-columns: 4vw 1fr;
+        column-gap: 2vw;
+        height: 13vw;
+        margin: 2vw 0;
+    }
+
+    .content-i {
+        width: 5vw;
+        height: 5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3vw;
+        border: 0.2vw solid #10804C;
+
+        font-size: 2vw;
+        color: #10804C;
+    }
+
+    .bag3 p {
+        margin: 0.5vw 0 0 0;
+    }
+
+    /*--------bawah-----------*/
+    .bawah {
+        width: 100%;
+        background-color: #151515;
+        color: #fff;
+        padding: 2vw 5vw;
+        display: grid;
+        grid-template-columns: 30vw 1fr 1fr;
+        column-gap: 5vw;
+    }
+
+    .bawah h4 {
+        font-size: 1.5vw;
+        font-family: "judul";
+        letter-spacing: 0.1vw;
+    }
+
+    .hiasan-bawah {
+        width: 5vw;
+        height: 0.2vw;
+        margin: 0.5vw 0 1vw 0;
+        border-radius: 10vw;
+        background-color: #10804C;
+    }
+
+    .bawah-kiri img {
+        margin: 1vw 0;
+        width: 30vw;
+    }
+
+    .bawah p, li {
+        font-size: 1vw;
+    }
+
+    .bawah-kanan-isi {
+        display: grid;
+        align-items: center;
+        margin: 0.5vw 0;
+        grid-template-columns: 1.5vw 1fr;
+    }
+
+    .bawah-kanan-isi i{
+        color:#747474;
+    }
+
+    .bawah-kanan{
+        display: grid;
+        grid-template-rows: 8vw 1fr;
+        row-gap: 2vw;
+    }
+
+    .ngisor li{
+        margin: 0.5vw 0;
+    }
+
+    /*-----editor----*/
+    .editor{
+        width: 100%;
+        height: 4vw;
+        background-color: #0f0f0f;
+        text-align: center;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1vw;
+        color: #10804C;
+    }
+
+    /*----Top---*/
+    .keatas{
+        position: fixed;
+        top: 90%;
+        cursor: pointer;
+        overflow: auto;
+        left: 95%;
+        z-index: 100;
+        opacity: 0;
+        transform: translateY(2vw);
+        transition: all 2s linear;
+    }
+
+    .keatas i{
+        padding: 1vw;
+        background-color: #000000;
+        font-size: 1.5vw;
+        color: #fff;
+        border-radius: 15vw;
+    }
+
+    .keatas.active{
+        opacity: 1;
+        transition: 1s ease-in-out;
+        transform: translateY(0vw);
+    }
+
+    .contenttop{
+        transition: 1s ease-in-out;
+    }
+
+    /*-----scroll hiasan iki -----*/
+    .hiasan-scroll{
+        position: fixed;
+        height: 0.2vw;
+        bottom: 0;
+        background-color: #f7ea00;
+        border-radius: 0 10vw 10vw 0 ;
+        transition: 1s ease-out;
+    }
+
+    .loading{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .loading img{ 
+        width: 30vw;
+        margin: auto;
+    }
+}
